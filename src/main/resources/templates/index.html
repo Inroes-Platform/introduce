@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<html>
+	<head>
+		<title>Inroes</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link href='https://fonts.googleapis.com/css?family=Hanuman' rel='stylesheet'>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div>
+							<span ><img src="images/icon.png" alt="" /></span>
+						</div>
+						<div class="content" style="width: 100%;">
+							<div class="inner">
+								<h1 style = "font-weight: 400;">Hello </h1>
+								<h1>INROES</h1>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#goal">Goal</a></li>
+								<li><a href="#value">Value</a></li>
+								<li><a href="#platform">Platform</a></li>
+								<li><a href="#contact">Contact</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Goal -->
+							<article id="goal">
+								<div >
+									<h2 class="major" style="display: inline; ">
+										<span>01.</span></br> Goal
+									</h2> 
+									<span class="suvTitle">Hyper-Personalized Health Care through AI Technology</span>
+								</div>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<p>It improves the health of all users and takes care of their healthCreate technology.Inroes offers a healthcare recommendation platform.Through AI technology, Inroes employees study how users manage their health conveniently and meticulously and strive to have a good impact on their health.Today, Inroes has access, scale to help users get the most out of their health platform</p>
+							</article>
+
+						<!-- Value -->
+							<article id="value">
+								<div >
+									<h2 class="major" style="display: inline; ">
+										<span>02.</span></br> Value
+									</h2> 
+									<span class="suvTitle">Improve user health through continuous health care</span>
+								</div>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<p>The value of Inroes is a guide for users in the health analysis process and health care. These values serve as the foundation for how to achieve Inroes goal of developing a revolutionary platform that best manages the health of all users. The value of Inroes is not just a word, but a common context for continuing to manage the health of individual users.</p>
+							</article>
+
+						<!-- Platform -->
+							<article id="platform">
+								<div >
+									<h2 class="major" style="display: inline; ">
+										<span>03.</span></br> Platform
+									</h2> 
+									<span class="suvTitle">Please look forward to me.</span>
+								</div>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<p>Management means that manages the health of user's health than selling products.Our purpose is provided through AI technology, and passionate and passion for employees.Through platform, providing services, users can be recommended by providing services that are convenient and meticulously suitable for their health management.</p>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<div >
+									<h2 class="major">
+										<span>04.</span></br> Contact
+									</h2> 
+								</div>
+								<form method="post" action="/email">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" id="emailSubmit"/></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer" style="font-size: 12px">
+						21, Teheran-ro 57-gil, Gangnam-gu, Seoul, Republic of Korea 5F </br> Copyright 2023.irnoes.All rights reserved
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#emailSubmit").click(function() {
+					// 폼 데이터를 JSON 형식으로 직렬화
+					var formData = {
+						name: $("#name").val(),
+						email: $("#email").val(),
+						message: $("#message").val()
+					};
+
+					$.ajax({
+						type: "POST",
+						url: "/email",
+						data: JSON.stringify(formData),
+						contentType: "application/json; charset=utf-8",
+						dataType: "json",
+						success: function(data) {
+							console.log(data)
+							console.log("Email sent successfully!");
+						},
+						error: function(err) {
+							console.error("Email sending failed:", err);
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
